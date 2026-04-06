@@ -1,0 +1,20 @@
+{
+  "name": "adrop-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot for ADROP Platform",
+  "main": "telegram-bot.cjs",
+  "scripts": {
+    "start": "node telegram-bot.cjs",
+    "dev": "nodemon telegram-bot.cjs"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

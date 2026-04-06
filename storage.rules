@@ -1,0 +1,40 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Правила для аватаров пользователей
+    match /users/{userId}/{allPaths=**} {
+      allow read: if true; // Все могут читать аватарки
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Правила для временных аватаров (при регистрации)
+    match /temp_avatars/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Правила для временных лого (при регистрации)
+    match /temp_logos/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Правила для аватаров офферов
+    match /offer_avatars/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Правила для баннеров офферов
+    match /offer_banners/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Правила для портфолио креаторов
+    match /portfolio/{allPaths=**} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}

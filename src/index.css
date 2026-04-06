@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-hero: "Archivo Black", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-background: #080B12;
+  --color-foreground: #E0E6F0;
+  --color-card: #0E1220;
+  --color-primary: #E94560;
+  --color-ugc: #8B5CF6;
+  --color-ugc-primary: #8B5CF6;
+  --color-clip: #06B6D4;
+  --color-clip-primary: #06B6D4;
+}
+
+@layer base {
+  :root {
+    --background: #080B12;
+    --foreground: #E0E6F0;
+    --card: #0E1220;
+    --primary: #E94560;
+    --ugc-primary: #8B5CF6;
+    --clip-primary: #06B6D4;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .text-gradient-creator {
+    background: linear-gradient(to right, #a855f7, #ec4899, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-customer {
+    background: linear-gradient(to right, #06b6d4, #3b82f6, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-gradient-creator {
+    background: linear-gradient(to right, #a855f7, #ec4899, #9333ea);
+  }
+  .bg-gradient-customer {
+    background: linear-gradient(to right, #06b6d4, #3b82f6, #0891b2);
+  }
+}

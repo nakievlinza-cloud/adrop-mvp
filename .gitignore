@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.codex-backups/
+archived-assets/
+deploy-f-upload/
+deploy-f-*.zip
+investor-deck-pdf/
+investor-deck-site/
+investor-deck-v2/
+Снимок экрана *.png

@@ -1,0 +1,76 @@
+=================================================================
+FIREBASE FIRESTORE RULES - КОПИРОВАТЬ ОТЮДА
+=================================================================
+
+Как применить:
+1. Открой https://console.firebase.google.com/
+2. Выбери проект: gen-lang-client-0169485869
+3. Слева: Firestore Database
+4. Вкладка: Security
+5. Удали старый код, вставь этот
+6. Нажми Publish
+
+=================================================================
+НАЧАЛО ПРАВИЛ (скопируй всё ниже):
+=================================================================
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    match /offers/{offerId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      allow update: if isOwner(resource.data.customerId);
+      allow delete: if isOwner(resource.data.customerId);
+    }
+
+    match /applications/{applicationId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+      allow delete: if isOwner(resource.data.creatorId) || isOwner(resource.data.customerId);
+    }
+
+    match /notifications/{notificationId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+      allow delete: if isAuthenticated();
+    }
+
+    match /chats/{chatId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+    }
+
+    match /chats/{chatId}/messages/{messageId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+    }
+  }
+}
+
+=================================================================
+КОНЕЦ ПРАВИЛ (скопируй всё выше)
+=================================================================
+
+После публикации:
+1. Перезагрузи страницу приложения (F5)
+2. Открой http://localhost:3000/debug-notifications
+3. Отправь приглашение креатору
+4. Проверь - должно появиться уведомление!

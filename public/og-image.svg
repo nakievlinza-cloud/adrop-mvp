@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad-og" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f0f1a"/>
+
+  <!-- Decorative circle -->
+  <circle cx="600" cy="315" r="200" fill="url(#grad-og)" opacity="0.1"/>
+  <circle cx="100" cy="100" r="50" fill="url(#grad-og)" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="80" fill="url(#grad-og)" opacity="0.05"/>
+
+  <!-- Logo -->
+  <circle cx="600" cy="280" r="80" fill="url(#grad-og)"/>
+  <circle cx="600" cy="280" r="70" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="600" y="290" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">ADROP</text>
+
+  <!-- Main title -->
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="white">UGC Marketplace</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="460" font-family="Arial, sans-serif" font-size="28" font-weight="normal" text-anchor="middle" fill="rgba(255,255,255,0.7)">Маркетплейс контента для grey niches</text>
+
+  <!-- CTA -->
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#8B5CF6">Соединяем бренды и креаторов</text>
+</svg>

@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.DS_Store
+.codex-backups
+*.log
+*.zip
+coverage
+tmp
+investor-deck-pdf
+investor-deck-site
+investor-deck-v2
+public/presentations
+Снимок экрана *.png

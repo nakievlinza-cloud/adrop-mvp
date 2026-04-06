@@ -1,0 +1,114 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "A user of the platform, either a creator or a customer.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email" },
+        "role": { "type": "string", "enum": ["creator", "customer"] },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "about": { "type": "string" },
+        "specializations": { "type": "array", "items": { "type": "string" } },
+        "verticals": { "type": "array", "items": { "type": "string" } },
+        "platforms": { "type": "object", "additionalProperties": { "type": "string" } },
+        "paymentDetails": { "type": "object", "properties": { "network": { "type": "string" }, "wallet": { "type": "string" } } },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role", "name", "createdAt"]
+    },
+    "Offer": {
+      "title": "Offer",
+      "description": "An offer created by a customer.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerAvatar": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "paymentModel": { "type": "string", "enum": ["Fix", "CPA", "Fix + CPA"] },
+        "vertical": { "type": "string" },
+        "platform": { "type": "string" },
+        "format": { "type": "string" },
+        "requirements": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["customerId", "title", "price", "paymentModel", "vertical", "platform", "createdAt"]
+    },
+    "Application": {
+      "title": "Application",
+      "description": "An application submitted by a creator for an offer.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "offerId": { "type": "string" },
+        "offerTitle": { "type": "string" },
+        "creatorId": { "type": "string" },
+        "creatorName": { "type": "string" },
+        "creatorAvatar": { "type": "string" },
+        "customerId": { "type": "string" },
+        "message": { "type": "string" },
+        "price": { "type": "number" },
+        "paymentModel": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "script", "filming", "review", "published", "completed", "rejected"] },
+        "escrowStatus": { "type": "string", "enum": ["held", "released", "disputed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["offerId", "creatorId", "customerId", "status", "createdAt"]
+    },
+    "Chat": {
+      "title": "Chat",
+      "description": "A chat between a creator and a customer.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "participantIds": { "type": "array", "items": { "type": "string" } },
+        "applicationId": { "type": "string" },
+        "offerTitle": { "type": "string" },
+        "lastMessage": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["participantIds", "updatedAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "A message within a chat.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "chatId": { "type": "string" },
+        "senderId": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["chatId", "senderId", "text", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Stores user profiles."
+    },
+    "/offers/{offerId}": {
+      "schema": { "$ref": "#/entities/Offer" },
+      "description": "Stores offers created by customers."
+    },
+    "/applications/{applicationId}": {
+      "schema": { "$ref": "#/entities/Application" },
+      "description": "Stores applications submitted by creators."
+    },
+    "/chats/{chatId}": {
+      "schema": { "$ref": "#/entities/Chat" },
+      "description": "Stores chat sessions."
+    },
+    "/chats/{chatId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/Message" },
+      "description": "Stores messages within a chat."
+    }
+  }
+}

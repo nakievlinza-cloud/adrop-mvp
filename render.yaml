@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: adrop
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: PAYMENT_MIN_AMOUNT
+        value: "10"
+      - key: PAYMENT_EXPIRY_MINUTES
+        value: "45"
+      - key: PAYMENTS_WALLET_TRC20
+        sync: false
+      - key: PAYMENTS_WALLET_ERC20
+        sync: false
+      - key: PAYMENTS_WALLET_BEP20
+        sync: false
+      - key: PAYMENTS_ETH_RPC_URL
+        value: "https://ethereum-rpc.publicnode.com"
+      - key: PAYMENTS_BSC_RPC_URL
+        value: "https://bsc-rpc.publicnode.com"
+      - key: TRONGRID_API_KEY
+        sync: false
+      - key: VITE_API_BASE_URL
+        value: ""
