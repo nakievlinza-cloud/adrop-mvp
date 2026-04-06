@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADROP Product Deck</title>
+    <meta
+      name="description"
+      content="Короткая продуктовая презентация ADROP для внутреннего показа команде и коллегам."
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+    <div class="page-glow glow-left"></div>
+    <div class="page-glow glow-right"></div>
+
+    <header class="deck-header">
+      <a class="brand-mark" href="/" aria-label="ADROP">
+        <svg
+          class="brand-logo"
+          width="140"
+          height="28"
+          viewBox="0 0 160 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M15 2 L2 28 H8 L15 14 L22 28 H28 L15 2 Z" fill="url(#deck-logo-grad)" />
+          <path d="M15 18 L11 26 H19 Z" fill="url(#deck-logo-grad)" />
+          <path d="M35 2 H48 C56 2 60 7 60 15 C60 23 56 28 48 28 H35 V2 Z M41 7 V23 H47 C52 23 54 20 54 15 C54 10 52 7 47 7 H41 Z" fill="url(#deck-logo-grad)" />
+          <path d="M68 2 H81 C87 2 91 5 91 11 C91 15 88 18 84 19 L92 28 H85 L78 20 H74 V28 H68 V2 Z M74 7 V15 H80 C83 15 85 13.5 85 11 C85 8.5 83 7 80 7 H74 Z" fill="url(#deck-logo-grad)" />
+          <path d="M108 2 C99 2 95 7 95 15 C95 23 99 28 108 28 C117 28 121 23 121 15 C121 7 117 2 108 2 Z M108 7 C113 7 115 10 115 15 C115 20 113 23 108 23 C103 23 101 20 101 15 C101 10 103 7 108 7 Z" fill="url(#deck-logo-grad)" />
+          <path d="M128 2 H141 C147 2 151 5 151 11 C151 17 147 20 141 20 H134 V28 H128 V2 Z M134 7 V15 H140 C143 15 145 13.5 145 11 C145 8.5 143 7 140 7 H134 Z" fill="url(#deck-logo-grad)" />
+          <defs>
+            <linearGradient id="deck-logo-grad" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FFFFFF" />
+              <stop offset="1" stop-color="#999999" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+      <div class="deck-header-copy">
+        <span>Продуктовая презентация</span>
+        <span>Внутренний показ</span>
+      </div>
+      <div class="deck-counter" aria-live="polite">
+        <span id="current-slide">01</span>
+        <span class="deck-counter-divider">/</span>
+        <span id="total-slides">16</span>
+      </div>
+    </header>
+
+    <nav class="slide-rail" aria-label="Навигация по слайдам">
+      <button class="rail-arrow" id="prev-slide" type="button" aria-label="Предыдущий слайд">↑</button>
+      <div class="rail-dots" id="rail-dots"></div>
+      <button class="rail-arrow" id="next-slide" type="button" aria-label="Следующий слайд">↓</button>
+    </nav>
+
+    <main class="deck-main" id="deck-main">
+      <section class="slide slide-cover" data-title="Обложка">
+        <div class="slide-inner slide-cover-grid">
+          <div class="copy-block">
+            <p class="eyebrow">ADROP / продукт без лишней магии</p>
+            <h1>Платформа, где бренд быстро запускает кампанию с креаторами.</h1>
+            <p class="lead">
+              Без таблиц, переписок в пяти местах и непонятных выплат. Бренд создаёт оффер,
+              креатор сразу понимает условия, а вся работа идёт в одном кабинете.
+            </p>
+            <p class="cover-summary">
+              ADROP — маркетплейс UGC-креативов для betting, gambling, nutra, dating,
+              crypto и других серых вертикалей.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Офферы</span>
+              <span class="pill">Чат</span>
+              <span class="pill">Выплаты</span>
+              <span class="pill">Проверка соцсетей</span>
+            </div>
+          </div>
+
+          <div class="hero-stage" aria-hidden="true">
+            <div class="hero-wordmark">UGC</div>
+            <img class="hero-asset hero-ugc" src="./assets/chrome-ugc.png" alt="" />
+            <img class="hero-asset hero-dollar" src="./assets/chrome-dollar.png" alt="" />
+            <div class="hero-panel hero-panel-main">
+              <div class="hero-panel-top">
+                <span class="panel-tag">ADROP FLOW</span>
+                <span class="panel-tag panel-tag-muted">от $100</span>
+              </div>
+              <div class="hero-metric">Бренд, креатор и деньги в одной системе</div>
+              <div class="hero-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="hero-panel hero-panel-side">
+              <div class="panel-mini-title">Внутри продукта</div>
+              <ul class="mini-list">
+                <li>Создание оффера</li>
+                <li>Оплата по фикс или просмотрам</li>
+                <li>Холд выплат 7 дней</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Позиционирование">
+        <div class="slide-inner market-grid">
+          <div class="market-copy">
+            <p class="eyebrow">1 / Что именно делает ADROP</p>
+            <h2>ADROP — маркетплейс UGC-креативов для серых офферов.</h2>
+            <p class="lead compact">
+              Мы говорим про вертикали, где бренду особенно сложно быстро найти подходящих
+              креаторов, безопасно запустить размещение и не утонуть в ручной координации.
+            </p>
+            <div class="vertical-pill-row">
+              <span class="vertical-pill">Betting</span>
+              <span class="vertical-pill">Gambling</span>
+              <span class="vertical-pill">Nutra</span>
+              <span class="vertical-pill">Dating</span>
+              <span class="vertical-pill">Crypto</span>
+            </div>
+          </div>
+
+          <div class="market-panels">
+            <article class="market-panel market-panel-problem">
+              <span class="panel-kicker">Как сейчас устроено</span>
+              <h3>Рынок живёт в ручном режиме и на доверии “на словах”.</h3>
+              <ul class="feature-list">
+                <li>креаторов ищут по чатам, знакомым и таблицам</li>
+                <li>условия по офферу объясняют вручную в личке</li>
+                <li>непонятно, чей это профиль и кто вообще отвечает за сроки</li>
+                <li>выплаты и статус публикации контролируют вручную</li>
+              </ul>
+            </article>
+
+            <article class="market-panel market-panel-solution">
+              <span class="panel-kicker">Что делает ADROP</span>
+              <h3>Собирает запуск UGC-кампании в один продуктовый контур.</h3>
+              <ul class="feature-list">
+                <li>бренд создаёт оффер и сразу задаёт понятные условия</li>
+                <li>креатор видит сумму, ставку или CPM-модель без догадок</li>
+                <li>чат, сдача ролика, статусы и проверка профиля живут внутри платформы</li>
+                <li>hold выплат и проверка соцсетей добавляют контроль и доверие</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Почему Partnerkin">
+        <div class="slide-inner partnerkin-fit">
+          <div class="partnerkin-copy">
+            <p class="eyebrow">2 / Почему это интересно Partnerkin</p>
+            <h2>Для Partnerkin это не просто новый раздел, а отдельный продуктовый слой поверх уже готовой affiliate-аудитории.</h2>
+            <p class="lead compact">
+              ADROP логично живёт рядом с тем, что Partnerkin уже умеет собирать вокруг себя:
+              бренды, офферы, рекламодателей, affiliate-команды, media buyers и вебмастеров.
+              То есть дистрибуция, доверие и контекст запуска здесь уже существуют.
+            </p>
+            <div class="audience-strip">
+              <article class="audience-metric">
+                <span class="metric-value">220K</span>
+                <span class="metric-label">посетителей в месяц</span>
+              </article>
+              <article class="audience-metric">
+                <span class="metric-value">640K</span>
+                <span class="metric-label">просмотров в месяц</span>
+              </article>
+              <article class="audience-metric">
+                <span class="metric-value">34K</span>
+                <span class="metric-label">подписчиков в VK и Telegram</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="partnerkin-points">
+            <article class="fit-point">
+              <span class="panel-kicker">Готовая дистрибуция</span>
+              <h3>Первые бренды и креаторы можно приводить не через дорогой холодный трафик, а через уже существующее медиа и комьюнити.</h3>
+              <p>Это снижает стоимость первого запуска и даёт быстрый доступ к аудитории, которая уже понимает affiliate и performance.</p>
+            </article>
+            <article class="fit-point">
+              <span class="panel-kicker">Новая monetization layer</span>
+              <h3>Partnerkin зарабатывает не только на медиа-размещениях, но и на регулярном обороте внутри продукта.</h3>
+              <p>ADROP добавляет транзакционную выручку, подписки и managed launch поверх уже знакомой аудитории рекламодателей.</p>
+            </article>
+            <article class="fit-point">
+              <span class="panel-kicker">Отдельный бренд, родной контекст</span>
+              <h3>Проект можно развивать как самостоятельный сервис Partnerkin, не перегружая основной портал.</h3>
+              <p>То есть Partnerkin получает новый продукт и новый денежный слой, а команда может запускать его быстро и отдельно.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Что это">
+        <div class="slide-inner">
+          <p class="eyebrow">3 / Что это за продукт</p>
+          <div class="section-head">
+            <h2>ADROP соединяет две стороны в одном рабочем месте.</h2>
+            <p>
+              Для бренда это кабинет запуска кампаний. Для креатора это понятные офферы,
+              чат и прозрачная выплата. Вместо ручного хаоса появляется один понятный
+              маршрут от брифа до денег.
+            </p>
+          </div>
+          <div class="bridge-layout">
+            <article class="info-panel panel-brand">
+              <span class="panel-kicker">Бренд</span>
+              <h3>Запускает кампанию без ручного хаоса</h3>
+              <ul class="feature-list">
+                <li>создаёт оффер и задаёт условия</li>
+                <li>видит отклики и пишет в одном чате</li>
+                <li>сразу понимает итоговую сумму</li>
+              </ul>
+            </article>
+            <div class="bridge-core">
+              <div class="bridge-node">ADROP</div>
+              <p>один продукт вместо таблиц, чатов и ручного контроля выплат</p>
+            </div>
+            <article class="info-panel panel-creator">
+              <span class="panel-kicker">Креатор</span>
+              <h3>Понимает оффер без лишних вопросов</h3>
+              <ul class="feature-list">
+                <li>видит, сколько платят и за что</li>
+                <li>подключает свой соцпрофиль и проходит проверку</li>
+                <li>идёт от отклика до выплаты по понятным шагам</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Проблема бренда">
+        <div class="slide-inner">
+          <p class="eyebrow">4 / Что сейчас болит у бренда</p>
+          <div class="section-head narrow">
+            <h2>Сегодня бренд тратит слишком много времени не на запуск, а на организацию.</h2>
+          </div>
+          <div class="pain-grid">
+            <article class="pain-card">
+              <span class="pain-number">01</span>
+              <h3>Креаторов ищут вручную</h3>
+              <p>Нужно просматривать профили, списываться и отдельно собирать, кто вообще подходит.</p>
+            </article>
+            <article class="pain-card">
+              <span class="pain-number">02</span>
+              <h3>Коммуникация расползается</h3>
+              <p>ТЗ в одном месте, ссылки в другом, а статусы живут в голове менеджера.</p>
+            </article>
+            <article class="pain-card">
+              <span class="pain-number">03</span>
+              <h3>Сложно контролировать деньги</h3>
+              <p>Неясно, сколько бренд заплатит по итогу и когда безопасно отпускать выплату.</p>
+            </article>
+            <article class="pain-card">
+              <span class="pain-number">04</span>
+              <h3>Много риска на входе</h3>
+              <p>Непонятно, настоящий ли профиль у креатора и дойдёт ли он до публикации.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Проблема креатора">
+        <div class="slide-inner split-slide">
+          <div class="split-copy">
+            <p class="eyebrow">5 / Что сейчас болит у креатора</p>
+            <h2>Креатор чаще всего видит не работу, а набор непонятных условий.</h2>
+            <p class="lead compact">
+              Если в оффере нет ясной суммы, нормального чата и понятного статуса выплаты,
+              доверия к платформе не будет.
+            </p>
+          </div>
+          <div class="stacked-notes">
+            <article class="note-card">
+              <h3>Неясно, сколько реально можно заработать</h3>
+              <p>Фикс и модель за просмотры часто объясняются слишком сложно.</p>
+            </article>
+            <article class="note-card">
+              <h3>Нет уверенности в выплате</h3>
+              <p>После публикации креатор не понимает, когда именно получит деньги.</p>
+            </article>
+            <article class="note-card">
+              <h3>Много ручной переписки</h3>
+              <p>Нужно уточнять одни и те же вещи, потому что оффер и чат не собраны вместе.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Как работает">
+        <div class="slide-inner">
+          <p class="eyebrow">6 / Как это работает</p>
+          <div class="section-head">
+            <h2>Логика продукта очень простая: оффер, диалог, публикация, выплата.</h2>
+          </div>
+          <div class="flow-grid">
+            <article class="flow-card">
+              <span class="flow-step">Шаг 1</span>
+              <h3>Бренд создаёт оффер</h3>
+              <p>Выбирает вертикаль, гео, модель оплаты и бюджет. Минимальный бюджет кампании: $100.</p>
+            </article>
+            <article class="flow-card">
+              <span class="flow-step">Шаг 2</span>
+              <h3>Креатор заходит в чат</h3>
+              <p>Сразу видит условия и может быстро договориться без лишних переходов в другие мессенджеры.</p>
+            </article>
+            <article class="flow-card">
+              <span class="flow-step">Шаг 3</span>
+              <h3>Публикация и выплата</h3>
+              <p>Работа сдаётся в платформе, проходит холд и потом уходит в выплату креатору.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Что уже есть">
+        <div class="slide-inner">
+          <p class="eyebrow">7 / Что уже есть в продукте</p>
+          <div class="section-head">
+            <h2>Это уже не идея на словах. Внутри есть рабочий продуктовый контур.</h2>
+          </div>
+          <div class="workspace-grid">
+            <article class="workspace-block tall">
+              <span class="panel-kicker">Брендовый кабинет</span>
+              <h3>Создание оффера и расчёт оплаты</h3>
+              <p>Бренд выбирает формат оплаты, количество интеграций и сразу видит итоговую сумму.</p>
+            </article>
+            <article class="workspace-block">
+              <span class="panel-kicker">Коммуникация</span>
+              <h3>Чат внутри платформы</h3>
+              <p>Без потери контекста между оффером, ТЗ и публикацией.</p>
+            </article>
+            <article class="workspace-block">
+              <span class="panel-kicker">Контроль</span>
+              <h3>Статусы по заказу</h3>
+              <p>Отклик, работа в процессе, отправлено на проверку, принято, hold, выплачено.</p>
+            </article>
+            <article class="workspace-block wide">
+              <span class="panel-kicker">Безопасность</span>
+              <h3>Проверка соцсетей и hold выплат</h3>
+              <p>Креатор подтверждает владение профилем, а выплата после публикации удерживается минимум 7 дней.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Экраны продукта">
+        <div class="slide-inner">
+          <p class="eyebrow">8 / Как это выглядит в продукте</p>
+          <div class="section-head">
+            <h2>Так сервис выглядит внутри для бренда и креатора.</h2>
+            <p>
+              Ниже не абстрактная схема, а понятные рабочие экраны: создание оффера, лента
+              для креатора и экран заказа с коммуникацией и контролем статуса.
+            </p>
+          </div>
+
+          <div class="showcase-shot-wrap">
+            <figure class="showcase-shot">
+              <img
+                src="./assets/product-screens-collage.png"
+                alt="Реальные экраны ADROP: создание оффера для бренда, лента офферов для креатора и заказ с чатом и статусами"
+              />
+            </figure>
+
+            <div class="showcase-caption-grid">
+              <article class="showcase-caption">
+                <span class="panel-kicker">Бренд</span>
+                <h3>Создаёт оффер в одном экране</h3>
+                <p>Сразу задаёт модель оплаты, видит что получает креатор и сколько нужно оплатить за весь оффер.</p>
+              </article>
+
+              <article class="showcase-caption">
+                <span class="panel-kicker">Креатор</span>
+                <h3>Видит ставку без переписки</h3>
+                <p>В ленте сразу понятно: фикс это или выплата за просмотры, сколько платят за 1K и какой потолок по интеграции.</p>
+              </article>
+
+              <article class="showcase-caption">
+                <span class="panel-kicker">Сделка</span>
+                <h3>Чат, статусы и hold в одном месте</h3>
+                <p>После отклика обе стороны ведут работу внутри платформы: чат, сдача работы, проверка, hold и финальная выплата.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Форматы оплаты">
+        <div class="slide-inner">
+          <p class="eyebrow">9 / Как считается оплата</p>
+          <div class="section-head">
+            <h2>Бренд задаёт простое правило. Креатор видит то же самое.</h2>
+            <p>
+              Главное, чтобы обе стороны одинаково читали оффер. Особенно в модели оплаты за просмотры.
+            </p>
+          </div>
+          <div class="tabs-strip" aria-hidden="true">
+            <span>Бартер</span>
+            <span>Фикс</span>
+            <span class="is-active">За просмотры</span>
+          </div>
+          <div class="formula-stage">
+            <div class="formula-card">
+              <span class="panel-kicker">Пример</span>
+              <h3>$15 за каждую 1000 просмотров</h3>
+              <p class="formula-line">$15 × просмотры / 1000, но не выше $300 за интеграцию</p>
+              <p class="formula-note">Выплата стартует после 1000 просмотров, а правило одинаково видно и бренду, и креатору.</p>
+            </div>
+            <div class="formula-side-list">
+              <article>
+                <h4>Бартер</h4>
+                <p>Бренд отдаёт товар, креатор делает размещение без денежной выплаты.</p>
+              </article>
+              <article>
+                <h4>Фикс</h4>
+                <p>Один креатор получает заранее понятную сумму за одну интеграцию.</p>
+              </article>
+              <article>
+                <h4>За просмотры</h4>
+                <p>Креатор понимает ставку за 1K просмотров и видит лимит сверху.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Защита сделки">
+        <div class="slide-inner split-slide split-strong">
+          <div class="split-copy">
+            <p class="eyebrow">10 / Что защищает сделку</p>
+            <h2>Мы закрываем не только запуск, но и доверие внутри сделки.</h2>
+          </div>
+          <div class="shield-list">
+            <article class="shield-item">
+              <span class="shield-badge">01</span>
+              <div>
+                <h3>Холд выплат 7 дней</h3>
+                <p>После публикации деньги не уходят сразу. Это снижает риск для бренда.</p>
+              </div>
+            </article>
+            <article class="shield-item">
+              <span class="shield-badge">02</span>
+              <div>
+                <h3>Проверка соцсети</h3>
+                <p>Креатор подтверждает, что TikTok или Instagram действительно принадлежат ему.</p>
+              </div>
+            </article>
+            <article class="shield-item">
+              <span class="shield-badge">03</span>
+              <div>
+                <h3>Один прозрачный пайплайн</h3>
+                <p>Отклик, чат, сдача ролика, проверка и выплата не рассыпаются по разным системам.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Выгода бренду">
+        <div class="slide-inner">
+          <p class="eyebrow">11 / Почему это удобно бренду</p>
+          <div class="section-head">
+            <h2>Бренд получает не просто каталог креаторов, а рабочую воронку запуска.</h2>
+          </div>
+          <div class="value-layout">
+            <div class="value-main-card">
+              <span class="panel-kicker">Для бренда</span>
+              <div class="value-big">Запуск кампаний от $100</div>
+              <p>Понятная сумма, один кабинет, один чат и прозрачный путь от брифа до выплаты.</p>
+            </div>
+            <div class="value-points">
+              <article>
+                <h3>Меньше ручной работы</h3>
+                <p>Не нужно собирать людей и статусы по частям.</p>
+              </article>
+              <article>
+                <h3>Быстрее тестировать связки</h3>
+                <p>Можно запускать кампании под TikTok, Reels и Shorts в одном месте.</p>
+              </article>
+              <article>
+                <h3>Проще контролировать риск</h3>
+                <p>Проверка профиля и hold выплат дают бренду чувство контроля.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Выгода креатору">
+        <div class="slide-inner">
+          <p class="eyebrow">12 / Почему это удобно креатору</p>
+          <div class="section-head">
+            <h2>Креатору важно не “красиво”, а понятно: сколько, за что и когда платят.</h2>
+          </div>
+          <div class="creator-strip">
+            <article class="creator-card creator-card-main">
+              <span class="panel-kicker">Для креатора</span>
+              <h3>Условия читаются сразу</h3>
+              <p>В фикс-модели он видит сумму за интеграцию. В CPM-модели он видит ставку за 1K просмотров и потолок выплаты.</p>
+            </article>
+            <article class="creator-card">
+              <h3>Меньше догадок</h3>
+              <p>Не нужно расшифровывать оффер через длинную переписку.</p>
+            </article>
+            <article class="creator-card">
+              <h3>Больше доверия</h3>
+              <p>Есть прозрачный статус по заказу и понятный момент, когда выплата выйдет из hold.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Монетизация">
+        <div class="slide-inner split-slide split-strong">
+          <div class="split-copy">
+            <p class="eyebrow">13 / Как ADROP зарабатывает</p>
+            <h2>Модель простая: процент с каждой сделки плюс дополнительные сервисы для брендов.</h2>
+          </div>
+          <div class="monetization-stack">
+            <article class="mono-card">
+              <span class="panel-kicker">Сейчас</span>
+              <h3>Минимальный бюджет оффера: $100</h3>
+              <p>Это отсеивает слишком мелкие заказы и держит продукт в рабочей экономике.</p>
+            </article>
+            <article class="mono-card mono-card-accent">
+              <span class="panel-kicker">Основной доход</span>
+              <h3>17.5% с оборота внутри ADROP</h3>
+              <p>Если через платформу проходит $100,000, сервисная выручка ADROP составляет около $17,500 до расходов.</p>
+            </article>
+            <article class="mono-card">
+              <span class="panel-kicker">Дальше</span>
+              <h3>Подписка бренда и помощь с запуском</h3>
+              <p>После первых тестов можно добавлять платные тарифы и managed launch для брендов.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Рынок и выручка">
+        <div class="slide-inner revenue-slide">
+          <div class="section-head narrow">
+            <p class="eyebrow">14 / Рынок и сколько на этом можно заработать</p>
+            <h2>Рынок уже большой, а Partnerkin получает шанс забрать не только внимание аудитории, но и транзакционную выручку.</h2>
+            <p>
+              Ниже не “фантазия на миллиард”, а простая модель: сколько может приносить ADROP как отдельный Partnerkin-проект
+              при рабочем запуске с понятной комиссией <strong>17.5%</strong> и без учёта подписок или managed launch fee.
+            </p>
+          </div>
+
+          <div class="revenue-grid">
+            <div class="revenue-market">
+              <article class="market-stat">
+                <span class="market-stat-value">$37B</span>
+                <h3>creator ad spend в США в 2025</h3>
+                <p>По IAB, рынок creator-рекламы вырос до одного из ключевых каналов для брендов и прибавляет быстрее общего медиарынка.</p>
+              </article>
+              <article class="market-stat">
+                <span class="market-stat-value">1.5M+</span>
+                <h3>full-time digital creators</h3>
+                <p>По IAB, creators уже стали заметной частью цифровой экономики и отдельной рабочей силой, а не нишевым явлением.</p>
+              </article>
+              <article class="market-stat">
+                <span class="market-stat-value">$13.62B</span>
+                <h3>affiliate spend в США в 2024</h3>
+                <p>По PMA, affiliate spending вырос на 49.8% к 2021 году, а сам канал стал ещё важнее для performance-команд и рекламодателей.</p>
+              </article>
+            </div>
+
+            <div class="revenue-model">
+              <div class="revenue-formula">
+                <span class="panel-kicker">Базовая формула</span>
+                <div class="formula-line">GMV внутри ADROP × 17.5% = сервисная выручка</div>
+                <p class="formula-note">Ниже модель только на комиссии. Подписка бренда и платный launch сюда не включены.</p>
+              </div>
+
+              <div class="scenario-list">
+                <article class="scenario-item">
+                  <div>
+                    <span class="panel-kicker">Пилот</span>
+                    <h3>50 брендов × 10 видео × $150</h3>
+                    <p>$75K оборота в месяц внутри платформы</p>
+                  </div>
+                  <strong>$13.1K / мес</strong>
+                </article>
+                <article class="scenario-item scenario-item-accent">
+                  <div>
+                    <span class="panel-kicker">База</span>
+                    <h3>100 брендов × 12 видео × $180</h3>
+                    <p>$216K оборота в месяц внутри платформы</p>
+                  </div>
+                  <strong>$37.8K / мес</strong>
+                </article>
+                <article class="scenario-item">
+                  <div>
+                    <span class="panel-kicker">Масштаб через Partnerkin</span>
+                    <h3>250 брендов × 15 видео × $200</h3>
+                    <p>$750K оборота в месяц внутри платформы</p>
+                  </div>
+                  <strong>$131.3K / мес</strong>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <p class="source-footnote">
+            Источники:
+            <a href="https://partnerkin.com/adv" target="_blank" rel="noreferrer">Partnerkin advertising page</a>,
+            <a href="https://www.iab.com/insights/2025-creator-economy-ad-spend-strategy-report/" target="_blank" rel="noreferrer">IAB Creator Economy Ad Spend &amp; Strategy Report 2025</a>,
+            <a href="https://www.iab.com/insights/deighton-study-2025/" target="_blank" rel="noreferrer">IAB Measuring the Digital Economy 2025</a>,
+            <a href="https://thepma.org/25industrystudy/" target="_blank" rel="noreferrer">PMA Industry Study 2025</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="slide" data-title="Ближайшая цель">
+        <div class="slide-inner">
+          <p class="eyebrow">15 / Что хотим проверить на первом этапе</p>
+          <div class="section-head">
+            <h2>Нам важно не просто показать красивый продукт, а поймать рабочую механику роста.</h2>
+          </div>
+          <div class="milestone-grid">
+            <article class="milestone-card">
+              <span class="milestone-value">15–20</span>
+              <span class="milestone-label">брендов в первой волне</span>
+            </article>
+            <article class="milestone-card">
+              <span class="milestone-value">10–15</span>
+              <span class="milestone-label">видео на бренд в месяц</span>
+            </article>
+            <article class="milestone-card">
+              <span class="milestone-value">$150+</span>
+              <span class="milestone-label">желательный средний бюджет оффера дальше</span>
+            </article>
+          </div>
+          <div class="checklist-panel">
+            <h3>Что будем смотреть</h3>
+            <ul class="feature-list">
+              <li>как быстро бренд доходит от регистрации до первого оффера</li>
+              <li>какой процент откликов превращается в публикацию</li>
+              <li>как люди реагируют на фикс, CPM и бартер</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-final" data-title="Что нужно от команды">
+        <div class="slide-inner final-grid">
+          <div class="copy-block">
+            <p class="eyebrow">16 / Что нужно сейчас от коллег</p>
+            <h2>Нам нужен не сложный разбор, а честная обратная связь по рабочему сценарию.</h2>
+            <p class="lead compact">
+              Достаточно ответить на три простых вопроса: понятно ли, для кого продукт, где ещё есть трение и что помешает бренду запустить первую кампанию.
+            </p>
+          </div>
+          <div class="ask-panel">
+            <article>
+              <h3>1. Понятно ли, что делает ADROP?</h3>
+              <p>После этой презентации человек должен уметь объяснить продукт в двух предложениях.</p>
+            </article>
+            <article>
+              <h3>2. Где ещё сложно?</h3>
+              <p>Особенно в создании оффера, оплате за просмотры и финальном пути к выплате.</p>
+            </article>
+            <article>
+              <h3>3. Что поможет быстрее дойти до первых брендов?</h3>
+              <p>Фидбек по позиционированию, онбордингу и тому, как продавать ценность без лишних слов.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="deck-hint">Листайте колёсиком, стрелками или кнопками справа</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
