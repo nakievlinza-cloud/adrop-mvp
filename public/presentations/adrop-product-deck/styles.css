@@ -329,7 +329,7 @@ h4 {
 .hero-stage::before {
   content: "";
   position: absolute;
-  inset: 5rem 2rem 2rem 2rem;
+  inset: 5rem 2rem 2rem 2.2rem;
   border-radius: 2.1rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(14, 18, 32, 0.48));
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -342,34 +342,10 @@ h4 {
   user-select: none;
 }
 
-.hero-wordmark {
-  position: absolute;
-  left: 3rem;
-  top: 6.4rem;
-  z-index: 1;
-  font-family: "Archivo Black", sans-serif;
-  font-size: clamp(6.2rem, 9vw, 8.2rem);
-  line-height: 0.8;
-  letter-spacing: -0.08em;
-  color: rgba(255, 255, 255, 0.15);
-  text-transform: uppercase;
-  text-shadow: 0 12px 42px rgba(0, 0, 0, 0.32);
-}
-
-.hero-ugc {
-  width: min(38rem, 82vw);
-  left: -7rem;
-  top: -2rem;
-  opacity: 0.28;
-  filter: drop-shadow(0 36px 90px rgba(0, 0, 0, 0.45));
-  animation: float-soft 12s ease-in-out infinite;
-  z-index: 0;
-}
-
 .hero-dollar {
-  width: min(13.2rem, 28vw);
-  right: 1.8rem;
-  top: 1.4rem;
+  width: min(12.2rem, 24vw);
+  right: 2rem;
+  top: 1.8rem;
   opacity: 0.98;
   filter: drop-shadow(0 36px 90px rgba(0, 0, 0, 0.55));
   animation: float-soft 9s ease-in-out infinite reverse;
@@ -386,19 +362,19 @@ h4 {
 }
 
 .hero-panel-main {
-  left: 2rem;
+  left: 1rem;
   right: auto;
-  width: min(26rem, calc(100% - 8.5rem));
-  bottom: 2.2rem;
-  padding: 1.4rem;
+  width: min(28rem, calc(100% - 9rem));
+  bottom: 2rem;
+  padding: 1.45rem;
   border-radius: 1.6rem;
 }
 
 .hero-panel-side {
-  width: 15rem;
-  right: 1rem;
-  top: 14.2rem;
-  padding: 1.15rem;
+  width: 18rem;
+  right: 0.5rem;
+  top: 13.2rem;
+  padding: 1.2rem;
   border-radius: 1.35rem;
 }
 
@@ -446,6 +422,14 @@ h4 {
   line-height: 1.1;
 }
 
+.hero-panel-copy {
+  margin: 0.8rem 0 0;
+  max-width: 25rem;
+  font-size: 0.92rem;
+  line-height: 1.58;
+  color: rgba(224, 230, 240, 0.72);
+}
+
 .hero-lines {
   display: grid;
   gap: 0.55rem;
@@ -479,14 +463,16 @@ h4 {
   padding: 0;
   margin: 1rem 0 0;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.9rem;
   font-size: 0.92rem;
 }
 
 .mini-list li {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 0.65rem;
+  line-height: 1.45;
+  align-items: start;
 }
 
 .mini-list li::before {
@@ -494,6 +480,11 @@ h4 {
   width: 0.5rem;
   height: 0.5rem;
   flex: none;
+  margin-top: 0.34rem;
+}
+
+.mini-list strong {
+  color: white;
 }
 
 .section-head {
@@ -1598,18 +1589,6 @@ h4 {
 
   .hero-stage {
     min-height: 22rem;
-  }
-
-  .hero-ugc {
-    left: -5rem;
-    width: 26rem;
-    top: -1rem;
-  }
-
-  .hero-wordmark {
-    left: 2.2rem;
-    top: 6.2rem;
-    font-size: 5.1rem;
   }
 
   .hero-dollar {
