@@ -1322,6 +1322,133 @@ h4 {
   box-shadow: var(--shadow);
 }
 
+.slide-trust .slide-inner {
+  display: grid;
+  align-items: center;
+}
+
+.trust-layout {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: start;
+}
+
+.trust-copy {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+  max-width: 28rem;
+  padding-top: 0.75rem;
+}
+
+.trust-copy h2 {
+  max-width: 7.5ch;
+}
+
+.trust-copy .lead {
+  margin-top: 0;
+  max-width: 25rem;
+  font-size: 1rem;
+  line-height: 1.56;
+}
+
+.trust-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  grid-template-areas:
+    "large small-one"
+    "large small-two";
+  align-items: stretch;
+}
+
+.trust-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  min-height: 13rem;
+  padding: 1.35rem 1.35rem 1.2rem;
+  border-radius: 1.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(15, 18, 30, 0.84), rgba(10, 14, 24, 0.98)),
+    radial-gradient(circle at top left, rgba(233, 69, 96, 0.08), transparent 44%);
+  box-shadow: var(--shadow);
+}
+
+.trust-card-large {
+  grid-area: large;
+  min-height: 27rem;
+  padding: 1.55rem 1.55rem 1.35rem;
+  background:
+    linear-gradient(180deg, rgba(15, 18, 30, 0.84), rgba(10, 14, 24, 0.98)),
+    radial-gradient(circle at top left, rgba(233, 69, 96, 0.14), transparent 45%);
+}
+
+.trust-card:nth-child(2) {
+  grid-area: small-one;
+}
+
+.trust-card:nth-child(3) {
+  grid-area: small-two;
+}
+
+.trust-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.trust-card .shield-badge {
+  margin-bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.trust-card h3 {
+  margin: 0;
+  font-size: clamp(1.18rem, 1.9vw, 1.52rem);
+  line-height: 1.08;
+}
+
+.trust-card p {
+  margin: 0;
+  max-width: 28ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.52;
+}
+
+.trust-card-large h3 {
+  font-size: clamp(1.6rem, 2.5vw, 2.35rem);
+  max-width: 9ch;
+}
+
+.trust-card-large p {
+  max-width: 30ch;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.trust-meta {
+  align-self: end;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 2rem;
+  padding: 0.48rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.73rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
 .value-layout {
   display: grid;
   gap: 1rem;
@@ -1450,6 +1577,8 @@ h4 {
   .market-grid,
   .showcase-grid,
   .showcase-caption-grid,
+  .trust-layout,
+  .trust-grid,
   .split-slide,
   .revenue-grid,
   .formula-stage,
@@ -1535,6 +1664,8 @@ h4 {
   .partnerkin-fit,
   .showcase-grid,
   .showcase-caption-grid,
+  .trust-layout,
+  .trust-grid,
   .split-slide,
   .revenue-grid,
   .formula-stage,
@@ -1556,6 +1687,27 @@ h4 {
 
   .hero-stage {
     min-height: 22rem;
+  }
+
+  .trust-copy {
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .trust-copy h2 {
+    max-width: 9ch;
+  }
+
+  .trust-card,
+  .trust-card-large {
+    min-height: auto;
+  }
+
+  .trust-grid {
+    grid-template-areas:
+      "large"
+      "small-one"
+      "small-two";
   }
 
   .hero-stage::after {
